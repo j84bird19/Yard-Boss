@@ -109,3 +109,23 @@ const ACADEMY_STEPS=[
 {id:'fact',label:'Interesting, fun, or useful fact',xp:100},
 {id:'quiz',label:'Review Quiz',xp:100}
 ];
+
+const BOOKS=[
+ {title:'Book I',name:'The Apprentice',tier:'Bronze'},
+ {title:'Book II',name:'The Craftsman',tier:'Silver'},
+ {title:'Book III',name:'The Builder',tier:'Gold'},
+ {title:'Book IV',name:'The Master Builder',tier:'Diamond'},
+ {title:'Book V',name:'The Guardian',tier:'Platinum'},
+ {title:'Book VI',name:'The Legacy',tier:'Onyx'}
+];
+
+const BUILDER_CODES=[
+ {theme:'Discipline',quote:'Labor is the price which Providence has fixed upon every valuable thing.',source:'Benjamin Franklin, historical Freemason',meaning:'Nothing valuable is built without work. Every saved dollar, finished task, and lesson completed is part of the price of freedom.',vocab:[['Labor','Work done with the body or mind.'],['Providence','A higher guiding order, destiny, or divine care.'],['Valuable','Something worth protecting because it improves life.']],reflection:'A boss is not built by one big move. He is built by repeating the right action when nobody is forcing him to do it.',reminder:'Build the man behind the boss.'},
+ {theme:'Fortitude',quote:'Be thou strong, therefore, and show thyself a man.',source:'1 Kings 2:2, a virtue-centered passage often echoed in fraternal teachings',meaning:'Strength is not only muscle. It is the ability to keep going when the easy choice is to quit.',vocab:[['Fortitude','Courage and strength during difficulty.'],['Virtue','A strong moral quality.'],['Resolve','A firm decision not to give up.']],reflection:'When Nick keeps saving even when he wants to spend, he is training fortitude.',reminder:'Strength is proven by follow-through.'},
+ {theme:'Industry',quote:'Diligence is the mother of good luck.',source:'Benjamin Franklin, historical Freemason',meaning:'Luck often shows up after preparation. The harder a man works with focus, the more opportunities he notices and uses.',vocab:[['Industry','Steady, focused work.'],['Diligence','Careful effort repeated over time.'],['Opportunity','A chance to move forward.']],reflection:'A quiet day can still build the boss if tools are cleaned, customers are contacted, and tomorrow is planned.',reminder:'Work creates openings.'},
+ {theme:'Prudence',quote:'Take time for all things: great haste makes great waste.',source:'Benjamin Franklin, historical Freemason',meaning:'Rushing causes mistakes. Wise decisions protect money, tools, time, and reputation.',vocab:[['Prudence','Wisdom before action.'],['Haste','Moving too fast without thinking.'],['Waste','Losing money, time, or materials unnecessarily.']],reflection:'Before spending from a job, pause and decide what belongs in the envelope first.',reminder:'Think before the money moves.'},
+ {theme:'Fidelity',quote:'Not unto us, O Lord, not unto us, but unto thy name give glory.',source:'Templar motto from Psalm 115:1',meaning:'Do the work with humility. The goal is not showing off. The goal is becoming trustworthy and useful.',vocab:[['Fidelity','Loyalty and faithfulness to a promise.'],['Humility','Strength without bragging.'],['Glory','Honor or praise.']],reflection:'A real boss keeps his word, finishes the job, and lets the results speak.',reminder:'Keep faith with the man you are building.'}
+];
+
+function getBuilderCode(index){return BUILDER_CODES[index % BUILDER_CODES.length];}
+function getBookForEnvelope(index){return BOOKS[Math.floor(index/5)] || BOOKS[BOOKS.length-1];}

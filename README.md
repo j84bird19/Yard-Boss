@@ -1,19 +1,19 @@
-# YardBoss-V2-Build03-Academy500-20260629_134858
+# YardBoss-V2-Build06-VisualSystem-20260629_205105
 
 Purpose:
-- LOCKED: V2 structure/systems from Build02
-- Size/responsive adjustment to stop horizontal overflow
-- Academy rebuilt as 5-part lesson worth 500 XP:
-  1. Words and definitions - 100 XP
-  2. Examples/explanations - 100 XP
-  3. Real-world personalized implementation - 100 XP
-  4. Interesting/useful fact - 100 XP
-  5. Review quiz - 100 XP
-- Dictionary words reopen completed lesson for review
+- Visual polish closer to rendered concept
+- Smooth fade-in page transitions
+- Drop shadows, hover/active states, cohesive black/gold palette
+- Fully responsive polish
+- Basic form validation and error messaging
+- Empty states for missing data arrays
+- Loading overlay
+- Locked Build05 systems preserved
 
 Test:
-- Confirm build stamp: YardBoss-V2-Build03-Academy500-20260629_134858
-- Check mobile sizing
-- Complete Academy steps
-- Tap dictionary word to review lesson
-- XP and requirements update
+- Confirm build stamp: YardBoss-V2-Build06-VisualSystem-20260629_205105
+- Check visuals against rendered concept
+- Add invalid money amount
+- Add/subtract money
+- Page transitions
+- Academy + Dictionary still work

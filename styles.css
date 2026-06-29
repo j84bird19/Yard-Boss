@@ -32,3 +32,36 @@ h1,h2{margin:0;color:#df9750;text-shadow:0 1px #000}.shield{width:70px;height:70
 .answerBtn{width:100%;border:0;border-radius:10px;background:#19130d;color:white;padding:12px;margin:7px 0;font-weight:900}.answerBtn:disabled{opacity:.5}.dictionary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.word{border:1px solid var(--line);border-radius:10px;background:#110d08;padding:12px}.word.locked{opacity:.45;filter:grayscale(.8)}.word b{color:var(--gold)}
 .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:100;place-items:center}.modal.show{display:grid}.modalCard{width:min(90vw,420px);background:#130d06;border:1px solid var(--line);border-radius:16px;padding:16px}.modalCard input{width:100%;padding:14px;border-radius:10px;border:1px solid var(--line);font-size:18px;margin:8px 0}.modalActions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.toast{position:fixed;left:12px;right:12px;bottom:84px;background:#130d06;border:1px solid var(--line);border-radius:12px;padding:14px;color:var(--gold);font-weight:1000;transform:translateY(160%);transition:.25s;z-index:101}.toast.show{transform:translateY(0)}
 @media(max-width:720px){.topNav{height:72px;grid-template-columns:1fr repeat(5,.72fr)}.logo{font-size:13px}.crown{font-size:19px}.navItem{font-size:8px}.app{padding-top:102px}.dashboard{grid-template-columns:1fr}.rightDash{border-left:0;border-top:1px solid #8e5617;padding-left:0;padding-top:12px}.moneyRow{flex-direction:column;align-items:stretch}.moneyRing{margin:auto}.miniGrid{grid-template-columns:repeat(4,1fr)}.bottomItem{font-size:9px}.identityRow{gap:8px}.shield{width:58px;height:58px}.rankIcon{width:48px;height:48px}.divider{display:none}}
+
+/* Build03 responsive fix + academy */
+html,body{overflow-x:hidden}
+.app,.dashboard,.paper,.card{max-width:100%;overflow:hidden}
+.identityRow{flex-wrap:wrap}
+.lessonStep{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:12px;margin:8px 0;background:#0b0906}
+.lessonStep input{width:24px;height:24px;accent-color:#55c641;flex:0 0 24px}
+.lessonStep b{display:block}.lessonStep small{color:var(--muted)}.lessonStep .content{flex:1}
+.lessonReview{border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:12px;background:#0b0906}
+.word{cursor:pointer}
+.word:disabled{cursor:not-allowed}
+@media(max-width:850px){
+ .dashboard{grid-template-columns:1fr!important}
+ .rightDash{grid-column:auto!important;grid-row:auto!important;border-left:0!important;border-top:1px solid #8e5617!important;padding-left:0!important;padding-top:12px!important}
+ .moneyRow{flex-direction:column!important;align-items:stretch!important}
+ .moneyRing{width:128px!important;height:128px!important;flex-basis:128px!important;margin:auto!important}
+ .moneyRing>div{width:94px!important;height:94px!important}
+ .miniGrid{grid-template-columns:repeat(4,1fr)!important}
+}
+@media(max-width:430px){
+ .topNav{height:70px!important;grid-template-columns:.75fr repeat(5,.68fr)!important}
+ .logo{font-size:11px!important}.crown{font-size:16px!important}.navItem{font-size:7px!important}
+ .app{padding-left:8px!important;padding-right:8px!important}
+ .identityRow h1{font-size:27px!important}.label{font-size:10px!important}
+ .shield{width:50px!important;height:50px!important;font-size:27px!important}
+ .rankIcon{width:44px!important;height:44px!important}
+ .divider{display:none!important}
+ .moneyButtons{grid-template-columns:1fr!important}
+ .paper{width:90vw!important}
+ .reqRow{grid-template-columns:28px 1fr auto 26px!important;font-size:12px!important;gap:5px!important}
+ .dictionary-grid{grid-template-columns:1fr!important}
+ .miniGrid{grid-template-columns:repeat(3,1fr)!important}
+}

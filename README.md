@@ -1,20 +1,19 @@
-# YardBoss-V2-Build02-FULL-20260628_204331
+# YardBoss-V2-Build03-Academy500-20260629_134858
 
 Purpose:
-- Full proper V2 files
-- Home matches approved concept direction
-- Fixed top and bottom navigation
-- Add/subtract savings
-- Money progress auto-syncs
-- XP auto-syncs from tasks and Academy
-- Requirements auto-check
-- Envelope locks/unlocks from actual saved total
-- If money is subtracted, completed envelopes can reopen
+- LOCKED: V2 structure/systems from Build02
+- Size/responsive adjustment to stop horizontal overflow
+- Academy rebuilt as 5-part lesson worth 500 XP:
+  1. Words and definitions - 100 XP
+  2. Examples/explanations - 100 XP
+  3. Real-world personalized implementation - 100 XP
+  4. Interesting/useful fact - 100 XP
+  5. Review quiz - 100 XP
+- Dictionary words reopen completed lesson for review
 
 Test:
-- Confirm build stamp: YardBoss-V2-Build02-FULL-20260628_204331
-- Add/subtract money
-- Complete XP tasks
-- Answer Academy question
-- Check Dictionary unlock
-- Check envelope auto-lock/unlock
+- Confirm build stamp: YardBoss-V2-Build03-Academy500-20260629_134858
+- Check mobile sizing
+- Complete Academy steps
+- Tap dictionary word to review lesson
+- XP and requirements update

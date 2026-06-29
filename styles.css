@@ -65,3 +65,232 @@ html,body{overflow-x:hidden}
  .dictionary-grid{grid-template-columns:1fr!important}
  .miniGrid{grid-template-columns:repeat(3,1fr)!important}
 }
+
+
+/* ===============================
+   Build04 Visual Polish Only
+   Systems untouched.
+================================= */
+
+body{
+  background:
+    radial-gradient(circle at 50% -10%, rgba(255,200,88,.13), transparent 34%),
+    radial-gradient(circle at 0% 30%, rgba(128,72,19,.15), transparent 30%),
+    linear-gradient(180deg,#0b0805 0%,#020202 72%);
+}
+
+.topNav,
+.bottomNav{
+  background:
+    linear-gradient(180deg,rgba(37,32,25,.96),rgba(6,6,6,.98));
+  box-shadow:0 8px 28px rgba(0,0,0,.55);
+}
+
+.logo{
+  color:#ffd975;
+  filter:drop-shadow(0 0 10px rgba(255,198,74,.35));
+}
+
+.navItem,
+.bottomItem{
+  letter-spacing:.3px;
+  transition:transform .15s ease, background .2s ease, color .2s ease;
+}
+
+.navItem.active,
+.bottomItem.active{
+  background:
+    radial-gradient(circle at top,rgba(255,215,105,.25),transparent 55%),
+    linear-gradient(180deg,#6b3e08,#1a1006);
+  box-shadow:inset 0 0 18px rgba(255,205,95,.14);
+}
+
+.navItem:active,
+.bottomItem:active,
+.addBtn:active,
+.subtractBtn:active,
+.answerBtn:active{
+  transform:scale(.98);
+}
+
+.dashboard{
+  background:
+    linear-gradient(135deg,rgba(43,32,19,.96),rgba(6,7,7,.98) 55%),
+    radial-gradient(circle at top left,rgba(255,191,82,.15),transparent 35%);
+  border-color:#c0751e;
+  box-shadow:
+    0 0 0 2px rgba(0,0,0,.9),
+    0 0 28px rgba(195,111,24,.18),
+    0 18px 48px rgba(0,0,0,.72);
+}
+
+.shield,
+.rankIcon,
+.xpBadge,
+.moneyMedal,
+.xpMedal{
+  box-shadow:
+    inset 0 0 18px rgba(255,255,255,.08),
+    inset 0 -10px 18px rgba(0,0,0,.28),
+    0 8px 18px rgba(0,0,0,.42);
+}
+
+.shield{
+  background:
+    radial-gradient(circle at 35% 25%,#e9a458,#7a3b12 58%,#261004);
+}
+
+.rankIcon{
+  background:
+    radial-gradient(circle at 35% 25%,#3a2a17,#0d0804 68%);
+}
+
+.moneyRing{
+  background:
+    conic-gradient(#74ed3f calc(var(--p)*1%),#7b4518 0);
+  box-shadow:
+    inset 0 0 0 8px #1a120a,
+    0 0 24px rgba(103,207,58,.18),
+    0 10px 26px rgba(0,0,0,.5);
+}
+
+.moneyRing>div{
+  background:
+    radial-gradient(circle at 50% 35%,#21150d,#100904 70%);
+  box-shadow:inset 0 0 18px rgba(0,0,0,.7);
+}
+
+.bar{
+  background:
+    linear-gradient(180deg,#050505,#111);
+  box-shadow:
+    inset 0 2px 6px rgba(0,0,0,.8),
+    0 1px 0 rgba(255,255,255,.08);
+}
+
+.fill.money{
+  background:
+    linear-gradient(180deg,#8fff57,#39b620 55%,#247d13);
+  box-shadow:0 0 12px rgba(103,207,58,.35);
+}
+
+.fill.xp{
+  background:
+    linear-gradient(180deg,#45c2ff,#127ad8 55%,#074d99);
+  box-shadow:0 0 12px rgba(30,154,255,.35);
+}
+
+.addBtn,
+.subtractBtn{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.24),
+    0 8px 18px rgba(0,0,0,.38);
+}
+
+.addBtn{
+  background:
+    linear-gradient(180deg,#64c637,#2c7117);
+  border-color:rgba(157,255,103,.38);
+}
+
+.subtractBtn{
+  background:
+    linear-gradient(180deg,#d34334,#7b120c);
+  border-color:rgba(255,120,105,.38);
+}
+
+.openEnvelope{
+  background:
+    radial-gradient(ellipse at center bottom,rgba(99,62,24,.45),transparent 58%);
+}
+
+.envBack,
+.envFront{
+  background:
+    linear-gradient(145deg,#b66a29 0%,#824014 44%,#321404 100%);
+  border-color:#e1973a;
+  box-shadow:
+    inset 0 0 22px rgba(255,216,126,.08),
+    inset 0 -22px 38px rgba(0,0,0,.25),
+    0 24px 62px rgba(0,0,0,.78);
+}
+
+.paper{
+  background:
+    radial-gradient(circle at top left,rgba(255,255,255,.28),transparent 35%),
+    linear-gradient(180deg,#f2dcaf,#dec28e);
+  border-color:#9a632b;
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.58),
+    inset 0 0 0 1px rgba(255,255,255,.23);
+}
+
+.paper h2{
+  color:#3c1e0b;
+  text-shadow:0 1px rgba(255,255,255,.25);
+}
+
+.reqRow{
+  background:rgba(255,255,255,.16);
+  backdrop-filter:blur(2px);
+}
+
+.check{
+  background:rgba(255,255,255,.18);
+}
+
+.check.done{
+  background:linear-gradient(180deg,#72df45,#3fa51c);
+  box-shadow:0 0 10px rgba(85,198,65,.35);
+}
+
+.envelopeCabinet{
+  background:
+    linear-gradient(180deg,rgba(20,20,18,.98),rgba(5,5,5,.99));
+  box-shadow:
+    inset 0 0 22px rgba(255,169,62,.04),
+    0 16px 34px rgba(0,0,0,.45);
+}
+
+.miniEnv{
+  box-shadow:
+    inset 0 0 12px rgba(255,255,255,.06),
+    inset 0 -12px 18px rgba(0,0,0,.28),
+    0 8px 16px rgba(0,0,0,.34);
+}
+
+.miniEnv.active{
+  box-shadow:
+    0 0 20px rgba(255,197,74,.72),
+    inset 0 0 18px rgba(255,255,255,.08);
+}
+
+.card{
+  background:
+    radial-gradient(circle at top left,rgba(255,190,75,.08),transparent 35%),
+    linear-gradient(180deg,#17110a,#050403);
+  box-shadow:0 12px 28px rgba(0,0,0,.45);
+}
+
+.taskItem,
+.lessonStep,
+.lessonReview,
+.word{
+  background:
+    linear-gradient(180deg,rgba(28,22,15,.92),rgba(8,6,4,.95));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.word:not(.locked){
+  border-color:rgba(255,211,107,.45);
+}
+
+.toast{
+  box-shadow:0 10px 28px rgba(0,0,0,.55);
+}
+
+@media(max-width:430px){
+  .dashboard{padding:12px}
+  .paper{padding:14px 12px}
+  .openEnvelope{margin-top:10px}
+}

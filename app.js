@@ -33,7 +33,7 @@ document.getElementById('xpText').textContent=xp+' / '+env.xpRequired+' XP';
 document.getElementById('totalSaved').textContent='$'+state.totalSaved;
 document.getElementById('totalXp').textContent=state.totalXp+' XP';
 document.getElementById('paperTitle').textContent=env.tier.toUpperCase()+' ENVELOPE';
-renderRequirements(idx);renderEnvelopeCabinet(idx);renderTasks(idx);renderAcademy(idx);renderDictionary();save()}
+renderRequirements(idx);renderBuildersCode(idx);renderBooks(idx);renderEnvelopeCabinet(idx);renderTasks(idx);renderAcademy(idx);renderDictionary();save()}
 
 function renderRequirements(idx){const env=ENVELOPES[idx];const rows=[
 {icon:'📋',label:'TASKS',value:taskCount(idx)+' / '+env.taskRequired,done:taskCount(idx)>=env.taskRequired},
@@ -43,6 +43,48 @@ function renderRequirements(idx){const env=ENVELOPES[idx];const rows=[
 ];document.getElementById('requirements').innerHTML=rows.map(r=>`<div class="reqRow"><div class="reqIcon">${r.icon}</div><div>${r.label}</div><div class="reqCount">${r.value}</div><div class="${r.lock?'lock':'check '+(r.done?'done':'')}">${r.lock?'🔒':(r.done?'✓':'')}</div></div>`).join('')}
 
 function renderEnvelopeCabinet(active){let html='';TIERS.forEach(t=>{html+=`<div class="tierTitle">${t.name.toUpperCase()} TIER</div><div class="miniGrid">`;t.ranks.forEach(rank=>{const i=rank-1,e=ENVELOPES[i],status=envelopeComplete(i)?'done':i===active?'active':'locked';html+=`<div class="miniEnv ${e.tier} ${status==='active'?'active':''} ${status==='locked'?'locked':''}"><div>${rank}</div>${status==='done'?'<div class="ok">✓</div>':''}${status==='locked'?'<div class="lockedIcon">🔒</div>':''}${status==='active'?'<small>IN PROGRESS</small>':''}</div>`});html+='</div>'});document.getElementById('envelopeCabinet').innerHTML=html}
+
+
+function renderBuildersCode(idx){
+ const code=getBuilderCode(idx);
+ const book=getBookForEnvelope(idx);
+ const isUnlocked=idx<=activeIndex();
+ const reminder=document.getElementById('builderReminder');
+ if(reminder)reminder.textContent=isUnlocked?code.reminder:'🔒 The next Builder’s Code is hidden until the envelope is unlocked.';
+ const box=document.getElementById('buildersCode');
+ if(!box)return;
+ if(!isUnlocked){
+  box.className='buildersCode locked';
+  box.innerHTML='<div class="codeKicker">🔒 Hidden Builder’s Code</div><div class="codeTheme">?????</div><div class="codeText">Theme, quote, meaning, vocabulary, reflection, and mystery reward will reveal when this envelope opens.</div>';
+  return;
+ }
+ box.className='buildersCode';
+ box.innerHTML=`
+  <div class="codeKicker">${book.title} • ${book.name}</div>
+  <div class="codeTheme">${code.theme}</div>
+  <div class="codeQuote">“${code.quote}”</div>
+  <div class="codeSource">${code.source}</div>
+  <div class="codeText"><b>What it means:</b> ${code.meaning}</div>
+  <div class="codeVocab">${code.vocab.map(v=>`<div><b>${v[0]}:</b> ${v[1]}</div>`).join('')}</div>
+  <div class="codeText"><b>Builder’s Reflection:</b> ${code.reflection}</div>
+  <div class="codeText"><b>Mystery Reward:</b> ${mysteryUnlocked(idx)?'Unlocked — use this principle today.':'🔒 Hidden until requirements are complete.'}</div>
+ `;
+}
+
+function renderBooks(active){
+ const panel=document.getElementById('booksPanel');
+ if(!panel)return;
+ const currentBookIndex=Math.floor(active/5);
+ panel.innerHTML=`
+  <div class="booksTitle">THE BUILDER’S BOOKS</div>
+  <div class="booksGrid">
+   ${BOOKS.map((book,i)=>{
+    const unlocked=i<=currentBookIndex;
+    return `<div class="bookCard ${unlocked?'':'locked'}"><b>${unlocked?book.title:'🔒 Book '+(i+1)}</b><span>${unlocked?book.name:'Hidden until reached'}</span></div>`;
+   }).join('')}
+  </div>`;
+}
+
 
 function renderTasks(idx){document.getElementById('taskList').innerHTML=TASKS.map(task=>{const key=idx+':'+task.id;return `<label class="taskItem"><input type="checkbox" data-task="${task.id}" ${state.taskDone[key]?'checked':''}><span><b>${task.label}</b><small>+${task.xp} XP</small></span></label>`}).join('')}
 

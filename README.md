@@ -1,14 +1,27 @@
-# YardBoss-V2-Build04-VisualPolish-20260629_140714
+# YardBoss-V2-Build05-BuildersCode-20260629_204150
 
 Purpose:
-- Visual polish only
-- No system/functionality changes
-- Locked Build03 systems preserved
-- Better spacing, shadows, glow, envelope depth, paper texture, buttons, bars
+- Add Builder's Code only
+- Hidden quote/theme/vocabulary/reflection/reminder until envelope is unlocked
+- Add Templar/Masonic-inspired Builder's Code content
+- Add vocabulary definitions under each quote
+- Add hidden Books I-VI system
+- Add reminder bar visible across screens
+
+Locked/Untouched:
+- Home layout
+- Navigation
+- Money system
+- XP system
+- Envelope progression
+- Academy structure
+- Dictionary review
+- Visual polish
 
 Test:
-- Confirm build stamp: YardBoss-V2-Build04-VisualPolish-20260629_140714
-- Check Home visuals
-- Check Add/Subtract still works
-- Check Academy still works
-- Check Dictionary review still works
+- Confirm build stamp: YardBoss-V2-Build05-BuildersCode-20260629_204150
+- Check Builder's Code appears on active envelope
+- Check vocabulary definitions show
+- Check mystery reward stays locked until requirements complete
+- Check Books panel locks future books
+- Confirm existing systems still work
